@@ -9,8 +9,8 @@
     var storage = new CrossStorageClient('http://localhost:3000/example/hub.html');
 
     var setKeys = function () {
-      return storage.set('key1', 'foo').then(function() {
-        return storage.set('key2', 'bar');
+      return storage.set('key1', JSON.stringify([1.0,2.0,3.0])).then(function() {
+        return storage.set('key2', JSON.stringify([4.0,5.0,6.0]));
       });
     };
 
